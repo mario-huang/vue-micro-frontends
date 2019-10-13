@@ -13,8 +13,8 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "less": "^2.7.3",
-    "less-loader": "4.1.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "babel-plugin-import": "^1.12.2",
     "@vue/cli-plugin-babel": "^3.12.0",
     "@vue/cli-plugin-eslint": "^3.12.0",
