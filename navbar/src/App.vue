@@ -1,31 +1,31 @@
 <template>
-  <div>
-    <div>
-      <a-menu v-model="current" mode="horizontal" theme="dark">
-        <a-sub-menu>
-          <span slot="title" class="submenu-title-wrapper">
-            <a-icon type="setting" />Navigation
-          </span>
-          <a-menu-item key="setting:1" @click="goApp1">打开App1</a-menu-item>
-          <a-menu-item key="setting:2" @click="goApp2">打开App2</a-menu-item>
-        </a-sub-menu>
-      </a-menu>
+  <div id="navbar-app">
+    <div id="nav">
+      <router-link to="/app1">App1</router-link> |
+      <router-link to="/app2">App2</router-link>
     </div>
-    <router-view></router-view>
+    <router-view/>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      current: ["mail"]
-    };
-  },
-  methods: {
-    goApp1() {
-      console.log("111");
-    },
-    goApp2() {}
-  }
-};
-</script>
+
+<style>
+#navbar-app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>

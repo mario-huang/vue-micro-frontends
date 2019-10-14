@@ -1,22 +1,17 @@
 <template>
-  <div>
-    <a-menu v-model="current" mode="horizontal" theme="dark">
-      <a-sub-menu>
-        <span slot="title" class="submenu-title-wrapper">
-          <a-icon type="setting" />Navigation
-        </span>
-        <a-menu-item key="setting:1">打开App1</a-menu-item>
-        <a-menu-item key="setting:2">打开App2</a-menu-item>
-      </a-sub-menu>
-    </a-menu>
-  </div>
+  <span id="app1">
+    App1 is working!!!
+    <p>comment me on and off to see HMR</p>
+    <router-view></router-view>
+  </span>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      current: ["mail"]
-    };
-  }
-};
-</script>
+
+<style>
+#app1 {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+</style>
