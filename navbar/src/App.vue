@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <a-menu v-model="current" mode="horizontal" theme="dark">
+      <a-menu mode="horizontal" theme="dark">
         <a-sub-menu>
           <span slot="title" class="submenu-title-wrapper">
             <a-icon type="setting" />Navigation
@@ -18,14 +18,15 @@
 export default {
   data() {
     return {
-      current: ["mail"]
-    };
+    }
   },
   methods: {
     goApp1() {
-      console.log("111");
+      this.$router.push('/app1')
     },
-    goApp2() {}
+    goApp2() {
+      this.$router.push('/app2')
+    }
   }
-};
+}
 </script>
