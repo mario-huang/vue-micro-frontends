@@ -3,10 +3,10 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import singleSpaVue from 'single-spa-vue';
-import Antd from 'ant-design-vue'
-import 'ant-design-vue/dist/antd.css'
+import { Menu } from 'ant-design-vue'
+// import 'ant-design-vue/dist/antd.css'
 
-Vue.use(Antd)
+Vue.use(Menu)
 
 Vue.config.productionTip = false;
 
